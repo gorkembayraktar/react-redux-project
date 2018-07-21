@@ -1,0 +1,87 @@
+@import 'base'
+@import '~bootstrap/scss/bootstrap'
+@import url('https://fonts.googleapis.com/css?family=Merienda:400,700&subset=latin-ext')
+
+$font-family: 'Merienda', cursive
+$color-text: #a01f9b
+$primary-color: #030914
+
+html
+  box-sizing: border-box
+
+
+html,
+body
+  margin: 0
+  padding: 0
+  height: 100%
+  font-family: $font-family
+
+
+*,
+*:before,
+*:after
+  box-sizing: inherit
+
+header
+  background-color: $primary-color
+
+  .navbar-brand
+    color : #fff !important
+    padding: 6px 12px
+
+
+
+  .nav-link
+    transition: all .7s
+    color: #fff
+    &.active
+      color: #f00 !important
+
+
+    &:hover
+      background-color: rgba(0,0,0,0.8)
+      color: #fff
+  .navbar-collapse
+    flex-basis: 100%
+    @media (min-width: 990px)
+      flex-basis: auto
+
+
+
+.home-container
+  color: #ffffff
+  background-image: url('images/background-image.jpg')
+  background-repeat: no-repeat
+  width: 100%
+  height: 600px
+  background-size: cover
+  animation: test 10s ease
+  animation-fill-mode: forwards
+  animation-delay: .2s
+
+
+  &h1
+  padding-top: 60px
+  text-align: center
+
+@keyframes test
+  0%
+    background-position: 0% 0%
+  25%
+    background-position: 100% 100%
+  50%
+    background-position: 50% 50%
+  100%
+    background-position: 50% 50%
+
+.navbar-toggler-icon
+  background-color: #fff
+
+
+footer
+  width: 100%
+  background-color: #000
+  height: 100px
+  line-height: 100px
+  color: #b21f2d
